@@ -3,7 +3,6 @@
 module Minimax =
     let minValue = -2147483648
     let maxValue = 2147483647
-    let testtuple = (0, 7)
     let Empty: byte = 0uy
     let White: byte = 1uy
     let Black: byte = 2uy
@@ -117,7 +116,6 @@ module Minimax =
                 CountCorners board tile (i+1) corners
         else
             corners
-            
 
     // Evaluates board
     let Evaluation board = 
@@ -214,8 +212,6 @@ module Minimax =
             let (moveX, moveY) = move
             board.[moveX, moveY] <- tile
 
-
-
     // Uses all other functions and a recursive MiniMax function with Alpha Beta pruning
     // to find the best move the ai can place with the given depth
     let rec MiniMaxAlphaBeta (board: byte[,]) depth a b tile isMaxPlayer = 
@@ -256,7 +252,6 @@ module Minimax =
                 forEachMove a b bestScore isMaxPlayer tile 0
             else
                 MiniMaxAlphaBeta board depth a b (OtherTile tile) (not isMaxPlayer)
-                
 
 
     type Class1() = 
