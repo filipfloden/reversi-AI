@@ -290,11 +290,11 @@ namespace Reversi
             {
                 if (Player1Mode.SelectedIndex == 0)
                 {
-                    player1.Mode = Player.Modes.AILegendary;
+                    player1.Mode = Player.Modes.Human;
                 }
                 if (Player2Mode.SelectedIndex == 0)
                 {
-                    player2.Mode = Player.Modes.AILegendary;
+                    player2.Mode = Player.Modes.Human;
                 }
                 if (Player1Mode.SelectedIndex == 1)
                 {
